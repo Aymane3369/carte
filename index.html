@@ -24,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* ===== ANIMATION FOND ===== */
         body::before {
             content: '';
             position: fixed;
@@ -44,7 +43,6 @@
             100% { transform: translate(4%, 3%) scale(1.05); }
         }
 
-        /* ===== CARTE PRINCIPALE ===== */
         .scene-card {
             position: relative;
             z-index: 1;
@@ -64,7 +62,6 @@
             transform: translateY(-4px) scale(1.003);
         }
 
-        /* ===== EN-TÊTE SCÉNIQUE ===== */
         .header-scene {
             text-align: center;
             margin-bottom: 32px;
@@ -133,7 +130,6 @@
             border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
-        /* ===== GRILLE ÉLÉMENTS ===== */
         .grid-scene {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -193,6 +189,24 @@
 
         .item-scene a:hover {
             color: #fbbc04;
+        }
+
+        /* ===== STYLE POUR LES AVATARS ===== */
+        .item-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .item-scene:hover .item-avatar {
+            border-color: #fbbc04;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(251, 188, 4, 0.3);
         }
 
         .item-icon-scene {
@@ -294,7 +308,6 @@
             border-color: rgba(76, 175, 80, 0.2);
         }
 
-        /* ===== PIED DE PAGE ===== */
         .footer-scene {
             display: flex;
             flex-wrap: wrap;
@@ -360,7 +373,6 @@
             50% { opacity: 1; transform: scale(1.3); }
         }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 600px) {
             .scene-card {
                 padding: 28px 18px 24px;
@@ -379,6 +391,10 @@
             .item-scene a {
                 font-size: 13px;
                 gap: 8px;
+            }
+            .item-avatar {
+                width: 32px;
+                height: 32px;
             }
             .item-icon-scene {
                 width: 32px;
@@ -438,7 +454,7 @@
             <!-- Pierre -->
             <div class="item-scene">
                 <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8/150In96_TTrY6FqmBG9o8Jv8mdhwJYuUx?sort=13&direction=a" target="_blank">
-                    <span class="item-icon-scene">👤</span>
+                    <img src="https://res.cloudinary.com/nrv87gxz/image/upload/f_auto,q_auto/1000145166_x0dajj" alt="Pierre" class="item-avatar">
                     <span class="item-name-scene">Pierre</span>
                     <span class="badge-scene folder">dossier</span>
                 </a>
@@ -447,7 +463,7 @@
             <!-- Rachi -->
             <div class="item-scene">
                 <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8/1i4oK97t8cpKpbYJ4ZQSD05vMLeDHwlJZ?sort=13&direction=a" target="_blank">
-                    <span class="item-icon-scene">👤</span>
+                    <img src="https://res.cloudinary.com/nrv87gxz/image/upload/f_auto,q_auto/1000145170_kxv1q2" alt="Rachi" class="item-avatar">
                     <span class="item-name-scene">Rachi</span>
                     <span class="badge-scene folder">dossier</span>
                 </a>
@@ -456,7 +472,7 @@
             <!-- Echaymae -->
             <div class="item-scene">
                 <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8/1oha-YQeJkGFq7TSNoIj8czYtwwkcACvO?sort=13&direction=a" target="_blank">
-                    <span class="item-icon-scene">👤</span>
+                    <img src="https://res.cloudinary.com/nrv87gxz/image/upload/f_auto,q_auto/1000145164_gs7jxl" alt="Echaymae" class="item-avatar">
                     <span class="item-name-scene">Echaymae</span>
                     <span class="badge-scene folder">dossier</span>
                 </a>
@@ -465,16 +481,16 @@
             <!-- Noé -->
             <div class="item-scene">
                 <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8/1DKaJho_EAVd3J3MQiMVvySaPephlDKER?sort=13&direction=a" target="_blank">
-                    <span class="item-icon-scene">👤</span>
+                    <img src="https://res.cloudinary.com/nrv87gxz/image/upload/f_auto,q_auto/1000145168_pgosgg" alt="Noé" class="item-avatar">
                     <span class="item-name-scene">Noé</span>
                     <span class="badge-scene folder">dossier</span>
                 </a>
             </div>
 
-            <!-- Aymane (dossier Drive) -->
+            <!-- Aymane -->
             <div class="item-scene">
                 <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8/1U6TuMcj81Q41D-cFroUuVGSfzlrb6iEJ?sort=13&direction=a" target="_blank">
-                    <span class="item-icon-scene">👤</span>
+                    <img src="https://res.cloudinary.com/nrv87gxz/image/upload/f_auto,q_auto/1000145174_glojra" alt="Aymane" class="item-avatar">
                     <span class="item-name-scene">Aymane</span>
                     <span class="badge-scene folder">dossier</span>
                 </a>
@@ -501,7 +517,7 @@
             <!-- Natu -->
             <div class="item-scene">
                 <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8/1sYNx6lqyhuLxPs04uUyoorMq-Iz1F7re?sort=13&direction=a" target="_blank">
-                    <span class="item-icon-scene">🔮 </span>
+                    <span class="item-icon-scene">👤</span>
                     <span class="item-name-scene">Natu</span>
                     <span class="badge-scene folder">dossier</span>
                 </a>

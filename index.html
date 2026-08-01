@@ -244,6 +244,56 @@
             border-color: rgba(251, 188, 4, 0.12);
         }
 
+        .badge-scene.tools {
+            background: rgba(255, 107, 107, 0.15);
+            color: #ff8a80;
+            border-color: rgba(255, 107, 107, 0.15);
+        }
+
+        .badge-scene.map {
+            background: rgba(76, 175, 80, 0.15);
+            color: #81c784;
+            border-color: rgba(76, 175, 80, 0.15);
+        }
+
+        /* ===== STYLE SPÉCIAL POUR SOUS-ÉLÉMENT ===== */
+        .item-scene.sub-item {
+            margin-left: 20px;
+            border-left: 2px solid rgba(251, 188, 4, 0.3);
+            border-radius: 18px 4px 4px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            padding-left: 20px;
+        }
+
+        .item-scene.sub-item::before {
+            content: '└─ ';
+            position: absolute;
+            left: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(251, 188, 4, 0.2);
+            font-size: 14px;
+            font-weight: 100;
+            letter-spacing: -1px;
+        }
+
+        .item-scene.sub-item .item-icon-scene {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            background: rgba(76, 175, 80, 0.08);
+        }
+
+        .item-scene.sub-item a {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .item-scene.sub-item:hover {
+            background: rgba(76, 175, 80, 0.06);
+            border-color: rgba(76, 175, 80, 0.2);
+        }
+
         /* ===== PIED DE PAGE ===== */
         .footer-scene {
             display: flex;
@@ -335,6 +385,10 @@
                 height: 32px;
                 font-size: 18px;
             }
+            .item-scene.sub-item {
+                margin-left: 10px;
+                padding-left: 14px;
+            }
             .footer-scene {
                 flex-direction: column;
                 align-items: stretch;
@@ -357,6 +411,10 @@
                 height: 70px;
                 font-size: 36px;
             }
+            .item-scene.sub-item {
+                margin-left: 6px;
+                padding-left: 12px;
+            }
         }
     </style>
 </head>
@@ -370,19 +428,28 @@
                 <span class="glow-text">Drive Hub</span>
             </h1>
             <p class="sub-scene">
-                <span>✦ 9 éléments · accès direct ✦</span>
+                <span>✦ 10 éléments · accès direct ✦</span>
             </p>
         </div>
 
         <!-- GRILLE -->
         <div class="grid-scene">
 
-            <!-- Aymane -->
+            <!-- Aymane (dossier Drive) -->
             <div class="item-scene">
                 <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8/1U6TuMcj81Q41D-cFroUuVGSfzlrb6iEJ?sort=13&direction=a" target="_blank">
                     <span class="item-icon-scene">👤</span>
                     <span class="item-name-scene">Aymane</span>
                     <span class="badge-scene folder">dossier</span>
+                </a>
+            </div>
+
+            <!-- 🌄 macarte (sous-élément de Aymane) -->
+            <div class="item-scene sub-item">
+                <a href="https://camardi-1.onrender.com/" target="_blank">
+                    <span class="item-icon-scene">🌄</span>
+                    <span class="item-name-scene">macarte</span>
+                    <span class="badge-scene map">carte</span>
                 </a>
             </div>
 
@@ -440,16 +507,16 @@
                 </a>
             </div>
 
-            <!-- index.html -->
+            <!-- ⏳️ Outils Interactifs -->
             <div class="item-scene">
-                <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8?sort=13&direction=a" target="_blank">
-                    <span class="item-icon-scene">📄</span>
-                    <span class="item-name-scene">index.html</span>
-                    <span class="badge-scene file">fichier</span>
+                <a href="https://ingenierie-travaux.vercel.app/espacedetente" target="_blank">
+                    <span class="item-icon-scene">⏳️</span>
+                    <span class="item-name-scene">Outils Interactifs</span>
+                    <span class="badge-scene tools">interactif</span>
                 </a>
             </div>
 
-            <!-- README (ajouté pour compléter) -->
+            <!-- README -->
             <div class="item-scene">
                 <a href="https://drive.google.com/drive/u/1/mobile/folders/1q6xarLLrAWW-eCxvfKaGhYyP4UFDRyP8?sort=13&direction=a" target="_blank">
                     <span class="item-icon-scene">📝</span>
